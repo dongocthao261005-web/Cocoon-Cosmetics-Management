@@ -21,7 +21,7 @@ Biểu đồ Use Case tổng quan và Sequence Diagram minh họa tương tác c
 
 ### 3. Database Design (Physical Data Model)
 Mô hình dữ liệu vật lý (PDM) thể hiện cấu trúc các bảng trong hệ thống.
-> ![ERD/PDM Diagram](<img width="3994" height="2551" alt="PDM" src="https://github.com/user-attachments/assets/f75f7982-6dfc-4fea-83ac-436865755d9e" />)
+> ![PDM Diagram](<img width="3994" height="2551" alt="PDM" src="https://github.com/user-attachments/assets/f75f7982-6dfc-4fea-83ac-436865755d9e" />)
 Vui lòng xem file kịch bản khởi tạo cơ sở dữ liệu chi tiết tại thư mục /Database/CocoonCosmetics_Database.sql
 
 ## Technologies Used
