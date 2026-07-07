@@ -1,0 +1,248 @@
+﻿/* =========================================
+   1. KHAI BÁO BIẾN MÀU (BẢNG MÀU COCOON)
+   ========================================= */
+:root {
+    --cocoon-bg: #f9f5f0; /* Màu kem nền */
+    --cocoon-brown: #8d5330; /* Màu nâu đất */
+    --cocoon-green: #2d9446; /* Màu xanh lá */
+    --cocoon-green-dark: #1e6b30; /* Xanh lá đậm (khi hover) */
+    --text-body: #333333;
+    /* Ghi đè màu gốc của Bootstrap */
+    --bs-primary: #2d9446;
+    --bs-link-color: #2d9446;
+}
+
+/* =========================================
+   2. CẤU HÌNH CHUNG
+   ========================================= */
+body {
+    background-color: var(--cocoon-bg);
+    font-family: 'Montserrat', sans-serif; /* Font chữ sang trọng */
+    color: var(--text-body);
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+/* =========================================
+   3. NAVBAR & MENU (SỬA LỖI XANH DƯƠNG)
+   ========================================= */
+.navbar-cocoon {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+    .navbar-cocoon .nav-link {
+        color: var(--text-body) !important;
+        font-weight: 600;
+    }
+
+        .navbar-cocoon .nav-link:hover {
+            color: var(--cocoon-brown) !important;
+        }
+
+/* --- FIX LỖI DROPDOWN MÀU XANH DƯƠNG (QUAN TRỌNG) --- */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+    /* Khi rê chuột, focus hoặc đang chọn -> Màu Xám Nhạt (An toàn nhất) */
+    .dropdown-item:hover,
+    .dropdown-item:focus,
+    .dropdown-item:active,
+    .dropdown-item.active {
+        background-color: #f2f2f2 !important; /* Nền xám nhạt */
+        color: var(--cocoon-green) !important; /* Chữ xanh lá */
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+/* =========================================
+   4. CARD SẢN PHẨM (TRANG CHỦ)
+   ========================================= */
+.card-product {
+    background: #fff;
+    border-radius: 12px; /* Bo góc mềm mại */
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; /* Để badge không bị lòi ra */
+}
+
+    /* Hiệu ứng khi rê chuột vào sản phẩm */
+    .card-product:hover {
+        transform: translateY(-5px); /* Bay lên nhẹ */
+        box-shadow: 0 10px 20px rgba(45, 148, 70, 0.15) !important; /* Đổ bóng xanh nhẹ */
+        border-color: var(--cocoon-green);
+    }
+
+    .card-product img {
+        transition: transform 0.5s ease;
+    }
+
+    .card-product:hover img {
+        transform: scale(1.05); /* Phóng to ảnh nhẹ */
+    }
+
+/* Nhãn giảm giá */
+.badge-sale {
+    background-color: #d9534f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 0 10px 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+/* =========================================
+   5. CÁC NÚT BẤM (BUTTONS)
+   ========================================= */
+.btn-cocoon {
+    background-color: var(--cocoon-brown);
+    color: white;
+    border-radius: 50px; /* Nút tròn viên thuốc */
+    padding: 8px 24px;
+    border: none;
+    font-weight: bold;
+}
+
+    .btn-cocoon:hover {
+        background-color: #6d4025; /* Nâu đậm hơn */
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(141, 83, 48, 0.3);
+    }
+
+/* Nút thêm giỏ hàng (+) */
+.btn-success {
+    background-color: var(--cocoon-green);
+    border-color: var(--cocoon-green);
+}
+
+    .btn-success:hover {
+        background-color: var(--cocoon-green-dark);
+        box-shadow: 0 4px 10px rgba(45, 148, 70, 0.3);
+    }
+
+.btn-outline-success {
+    color: var(--cocoon-green);
+    border-color: var(--cocoon-green);
+}
+
+    .btn-outline-success:hover {
+        background-color: var(--cocoon-green);
+        color: white;
+    }
+
+/* =========================================
+   6. TEXT & TIÊU ĐỀ
+   ========================================= */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-body);
+}
+
+.text-cocoon {
+    color: var(--cocoon-brown) !important;
+}
+
+.text-green {
+    color: var(--cocoon-green) !important;
+}
+
+/* Ẩn thanh cuộn xấu xí của trình duyệt (Tùy chọn) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--cocoon-brown);
+    }
+/* --- SỬA LẠI NHÃN GIẢM GIÁ (BADGE -15%) --- */
+.badge-sale {
+    position: absolute; /* Để đặt nó nằm đè lên ảnh */
+    top: 10px; /* Cách mép trên 10px */
+    left: 10px; /* Cách mép trái 10px */
+    background-color: #dc3545; /* Màu đỏ tươi (giống hình) */
+    color: white;
+    padding: 4px 10px; /* Độ rộng của nhãn */
+    border-radius: 6px; /* Bo tròn 4 góc mềm mại */
+    font-size: 0.85rem; /* Cỡ chữ vừa phải */
+    font-weight: 800; /* Chữ đậm */
+    z-index: 10; /* Luôn nằm trên cùng */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15); /* Đổ bóng nhẹ cho nổi */
+}
+
+/* =========================================
+   7. FOOTER (SỬA LỖI GIAO DIỆN)
+   ========================================= */
+html {
+    position: relative;
+    min-height: 100%; /* Đảm bảo trang web luôn cao ít nhất bằng màn hình */
+}
+
+body {
+    margin-bottom: 300px; /* Chừa chỗ cho Footer (để không bị nội dung đè lên) */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto; /* Chiều cao tự động */
+    background-color: #f9f9f9; /* Nền xám nhẹ (hoặc đổi thành màu khác tùy ý) */
+    border-top: 1px solid #e5e5e5;
+    padding-top: 40px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+    /* Tiêu đề trong Footer */
+    footer h5 {
+        color: var(--cocoon-brown); /* Màu nâu Cocoon */
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Link trong Footer */
+    footer a {
+        display: block;
+        color: #666;
+        margin-bottom: 10px;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+        footer a:hover {
+            color: var(--cocoon-green); /* Rê chuột vào chuyển xanh lá */
+            padding-left: 5px; /* Hiệu ứng trượt nhẹ */
+        }
+
+    /* Icon liên hệ */
+    footer i {
+        color: var(--cocoon-green);
+        width: 20px;
+    }
