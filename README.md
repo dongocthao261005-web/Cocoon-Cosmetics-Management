@@ -13,15 +13,15 @@ Dự án hệ thống quản lý cửa hàng mỹ phẩm Cocoon, bao gồm websi
 
 ### 1. Business Process Model (BPM)
 Quy trình chăm sóc khách hàng và quản lý quan hệ khách hàng.
-> ![BPM Diagram](<img width="1191" height="1101" alt="BPM" src="https://github.com/user-attachments/assets/d6455bcb-1100-41be-90d0-c2c8582b862c" />)
+<img width="1191" height="1101" alt="BPM" src="https://github.com/user-attachments/assets/d6455bcb-1100-41be-90d0-c2c8582b862c" />
 
 ### 2. System Modeling
 Biểu đồ Use Case tổng quan và Sequence Diagram minh họa tương tác của người dùng.
-> ![Use Case Diagram](<img width="3215" height="2798" alt="UC" src="https://github.com/user-attachments/assets/3bbace66-3823-47d5-a89b-50ff399cdfad" />)
+<img width="3215" height="2798" alt="UC" src="https://github.com/user-attachments/assets/3bbace66-3823-47d5-a89b-50ff399cdfad" />
 
 ### 3. Database Design (Physical Data Model)
 Mô hình dữ liệu vật lý (PDM) thể hiện cấu trúc các bảng trong hệ thống.
-> ![PDM Diagram](<img width="3994" height="2551" alt="PDM" src="https://github.com/user-attachments/assets/f75f7982-6dfc-4fea-83ac-436865755d9e" />)
+<img width="3994" height="2551" alt="PDM" src="https://github.com/user-attachments/assets/f75f7982-6dfc-4fea-83ac-436865755d9e" />
 Vui lòng xem file kịch bản khởi tạo cơ sở dữ liệu chi tiết tại thư mục /Database/CocoonCosmetics_Database.sql
 
 ## Technologies Used
